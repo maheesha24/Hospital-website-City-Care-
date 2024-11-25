@@ -1,0 +1,151 @@
+/* Imports for header and footer styles */
+@import url('header.css');
+@import url('footer.css');
+
+/* =======================================
+   Page Title Styling
+======================================== */
+.page-title {
+  background: url('images/slider/8.jpg') no-repeat center center/cover;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+}
+
+/* Style for products */
+/* Shop Page Styles */
+.container {
+  margin-top: 50px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* Adjust width and height for a smaller card */
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product .card-body {
+  padding: 15px;
+}
+
+.product .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-cart-btn {
+  position: fixed; /* Keeps the button in a fixed position */
+  bottom: 20px;    /* Distance from the bottom of the viewport */
+  right: 20px;     /* Distance from the right of the viewport */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;   /* Ensures the button stays on top of other content */
+}
+
+.floating-cart-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cart-popup {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cart-popup h5 {
+  margin-bottom: 15px;
+}
+
+.cart-popup .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-popup .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.cart-popup .quantity button {
+  background: #ddd;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.cart-popup .quantity span {
+  margin: 0 10px;
+}

@@ -1,0 +1,71 @@
+@import url(header.css);
+@import url(footer.css);
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.edit-profile {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary i {
+    margin-right: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.form-control-file {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.form-control-file:hover {
+    border-color: #007bff;
+}
+
+/* Separate CSS styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.edit-profile {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+

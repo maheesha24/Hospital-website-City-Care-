@@ -1,0 +1,181 @@
+@import url('header.css');
+
+@import url('footer.css');
+
+
+/* Page Title */
+.page-title {
+  background: url('images/slider/8.jpg') no-repeat center center/cover;
+  background-size:cover; /* Set fixed size for the image */
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text readability */
+  z-index: 1;
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+}
+
+  /* Blog Grid Styles */
+  
+  .blog-grid {
+    background: #ffffff;
+    padding: 80px 0;
+  }
+  
+  .post-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+  }
+  
+  .post-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .post-img {
+    position: relative;
+  }
+  
+  .post-img img {
+    width: 100%;
+    height: 220px; /* Fixed height to maintain uniformity */
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-bottom: 5px solid #007bff;
+  }
+  
+  .post-img:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+  }
+  
+  .post-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .post-img:hover .post-img-overlay {
+    opacity: 1;
+  }
+  
+  .post-img-overlay .btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .post-img-overlay .btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  .post-body {
+    padding: 20px 25px;
+  }
+  
+  .post-title a {
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  
+  .post-title a:hover {
+    color: #007bff;
+  }
+  
+  .post-desc {
+    color: #666;
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+  
+  .post-meta {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 10px;
+  }
+  
+  .post-meta span {
+    color: #007bff;
+    margin-right: 15px;
+  }
+  
+  .pagination-area {
+    margin-top: 40px;
+  }
+  
+  .pagination .page-link {
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .pagination .page-link:hover {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .pagination .page-link.active {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .icon-arrow-right {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .pagination .page-link:hover .icon-arrow-right {
+    transform: translateX(5px);
+  }
+  

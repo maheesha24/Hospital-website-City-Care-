@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Container */
+.job-application-container {
+    padding: 60px 15px;
+}
+
+.job-application-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.job-application-container p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* Job Posting Card */
+.job-posting {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.job-posting:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.job-posting .card-body {
+    padding: 30px;
+}
+
+.job-posting .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.job-posting .card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Download Button */
+.btn-download {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 30px;
+    box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn-download {
+        width: 100%;
+    }
+}

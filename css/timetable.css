@@ -1,0 +1,106 @@
+@import url(header.css);
+@import url(footer.css);
+
+
+.page-title {
+  position: relative;
+  padding: 80px 0;
+  background-color: rgba(12, 11, 11, 0.5); /* Adding a dark overlay */
+  color: #fff;
+}
+
+.page-title .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.page-title .bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* Adjust the transparency of the background */
+}
+
+.page-title h1, 
+.page-title .breadcrumb {
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb {
+  background-color: transparent; /* Make breadcrumb background transparent */
+  padding: 0;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #fff; /* Ensure active breadcrumb is also white */
+}
+
+    
+
+/* Doctor's Timetable */
+.doctors-timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .doctors-timetable th,
+  .doctors-timetable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+  }
+  
+  .doctors-timetable th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .doctors-timetable td {
+    background-color: #f9f9f9;
+  }
+  
+  .event {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .event__header {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .event__type,
+  .event__time,
+  .doctor__name {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .event__time span {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  

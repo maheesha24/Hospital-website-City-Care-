@@ -1,0 +1,133 @@
+@import url(header.css);
+@import url(footer.css);
+
+
+/* Page Title Section */
+.page-title-layout1 {
+    position: relative;
+    padding: 100px 0;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .bg-overlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .page-title-layout1 .bg-img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .pagetitle__heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .pagetitle__desc {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn-rounded {
+    border-radius: 50px;
+  }
+  
+  .btn-secondary {
+    background-color: #007bff;
+    color: #acabe0;
+  }
+  
+  .btn-outline-secondary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  /* Services section */
+.services-layout1 {
+  background-color: #f9f9f9;
+  padding-top: 50px;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .service__icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service__icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+.service__title {
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
+.service__desc {
+  font-size: 16px;
+  color: #666;
+}
+
+.service__list li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.service__list i {
+  margin-right: 10px;
+}
+
+/* Button styles */
+.btn__secondary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn__secondary:hover {
+  background-color: #0056b3;
+  color: #fff; /* Ensure text remains white on hover */
+}
+
+.btn__outlined {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn__outlined:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn__rounded {
+  border-radius: 30px;
+  font-weight: bold;
+}

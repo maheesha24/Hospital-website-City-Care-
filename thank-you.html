@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="css/thank-you.css">
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been successfully processed. We appreciate your trust in us!</p>
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <ul id="order-items"></ul>
+            <p id="shipping-cost"></p>
+            <p id="order-total"></p>
+            <p id="order-date"></p>
+        </div>
+        <div class="button-group">
+            <button onclick="downloadPDF()" class="btn">Download PDF</button>
+            <button onclick="window.location.href='index.html'" class="btn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderItems = document.getElementById('order-items');
+            const shippingCost = document.getElementById('shipping-cost');
+            const orderTotal = document.getElementById('order-total');
+            const orderDate = document.getElementById('order-date');
+
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                const total = item.quantity * item.price;
+                subtotal += total;
+                orderItems.innerHTML += `<li>${item.name} x ${item.quantity} - Rs. ${total.toFixed(2)}</li>`;
+            });
+
+            const shippingFee = 500;
+            const grandTotal = subtotal + shippingFee;
+
+            shippingCost.textContent = `Shipping Cost: Rs. ${shippingFee.toFixed(2)}`;
+            orderTotal.textContent = `Total: Rs. ${grandTotal.toFixed(2)}`;
+            orderDate.textContent = `Order Date: ${new Date().toLocaleString()}`;
+        });
+
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const logo = new Image();
+            logo.src = 'images/logo/logo.png';
+
+            logo.onload = () => {
+                doc.addImage(logo, 'PNG', 10, 10, 50, 20);
+                doc.setFontSize(12);
+                doc.text('City Care Hospital', 105, 40, { align: 'center' });
+                doc.text('123 Health St, Wellness City', 105, 45, { align: 'center' });
+                doc.text('Phone: (123) 456-7890', 105, 50, { align: 'center' });
+
+                doc.setFontSize(18);
+                doc.text('Thank You for Your Order!', 105, 60, { align: 'center' });
+                doc.setFontSize(13);
+                doc.text('Order Summary', 105, 80, { align: 'center' });
+
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.forEach((item, index) => {
+                    const total = item.quantity * item.price;
+                    doc.text(`${item.name} x ${item.quantity} - Rs. ${total.toFixed(2)}`, 20, 90 + index * 8);
+                });
+
+                const shippingFee = 500;
+                const subtotal = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
+                const grandTotal = subtotal + shippingFee;
+
+                doc.text(`Shipping Cost: Rs. ${shippingFee.toFixed(2)}`, 20, 90 + cart.length * 8);
+                doc.text(`Total: Rs. ${grandTotal.toFixed(2)}`, 20, 100 + cart.length * 8);
+                doc.text(`Order Date: ${new Date().toLocaleString()}`, 20, 110 + cart.length * 8);
+
+                doc.setFontSize(12);
+                doc.text('Thank you for choosing City Care Hospital. We look forward to serving you again!', 20, 120 + cart.length * 8, { maxWidth: 180 });
+
+                doc.save('order_summary.pdf');
+            };
+        }
+    </script>
+</body>
+</html>

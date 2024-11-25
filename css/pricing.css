@@ -1,0 +1,232 @@
+@import url(header.css);
+@import url(footer.css);
+/* Page Title */
+.page-title {
+  background: url('images/slider/8.jpg') no-repeat center center/cover;
+  background-size:cover; /* Set fixed size for the image */
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text readability */
+  z-index: 1;
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+}
+
+
+/*--------------------------
+        Pricing Section
+---------------------------*/
+.pricing {
+    padding: 0 0 80px;
+  }
+  
+  .packages-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-top: -130px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .pricing-package {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 30px);
+    padding: 45px 50px 50px;
+    background-color: #fff;
+    box-shadow: 0px 5px 83px rgba(14, 32, 77, 0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+  }
+  
+  .package__title {
+    color: #435ba1;
+    font-size: 22px; /* Increased font size */
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .package__desc {
+    font-size: 16px; /* Increased font size */
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .package__list {
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .package__list li {
+    margin-bottom: 15px; /* Increased spacing */
+    font-size: 16px; /* Increased font size */
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .package__list li i {
+    color: #007bff; /* Blue checkmark */
+    margin-right: 10px;
+  }
+  
+  .package__price {
+    font-size: 55px; /* Increased font size */
+    font-weight: 600;
+    color: #435ba1;
+    margin-bottom: 20px;
+  }
+  
+  .package__currency {
+    font-size: 24px;
+  }
+  
+  .package__period {
+    font-size: 16px; /* Increased font size */
+    font-weight: 600;
+  }
+  
+  .package__footer {
+    text-align: center;
+    padding: 32px 20px;
+    background-color: #def8f6;
+    border-radius: 10px;
+  }
+  
+  .btn-purchase {
+    color: #fff;
+    background-color: #435ba1;
+    border: none;
+    padding: 12px 24px; /* Adjusted padding for consistency */
+    font-size: 16px; /* Increased font size */
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .btn-purchase:hover {
+    background-color: #2c4477; /* Darker blue on hover */
+  }
+  
+  /* Additional Styling for the Pricing Section */
+  .text__link {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .text__link a {
+    color: #435ba1;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .text__link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Pricing Widget Layout Variations */
+  .pricing-widget-layout1 {
+    background-color: #def8f6;
+  }
+  
+  .pricing-widget-layout2 {
+    border: 2px solid #e6e8eb;
+  }
+  
+  .pricing-widget-layout3 {
+    background-color: #f6f6f6;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (min-width: 992px) {
+    .packages-wrapper > [class*="col-"]:first-of-type .pricing-package {
+      border-radius: 15px 0px 0px 15px;
+    }
+  
+    .packages-wrapper > [class*="col-"]:last-of-type .pricing-package {
+      border-radius: 0px 15px 15px 0px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .pricing-package {
+      height: auto;
+      padding: 20px; /* Adjusted padding for better mobile view */
+      border-radius: 10px;
+    }
+  
+    .package__title {
+      font-size: 20px; /* Adjusted font size */
+      margin-bottom: 10px;
+    }
+  
+    .package__price {
+      font-size: 35px; /* Adjusted font size */
+      margin-bottom: 10px;
+    }
+  
+    .package__desc {
+      font-size: 15px; /* Adjusted font size */
+      margin-bottom: 20px;
+    }
+  
+    .package__list {
+      margin-bottom: 30px;
+    }
+  
+    .package__footer {
+      border-radius: 10px;
+      padding: 20px; /* Adjusted padding */
+    }
+  
+    .btn-purchase {
+      padding: 10px 20px; /* Adjusted padding */
+      font-size: 14px; /* Adjusted font size */
+    }
+  
+    .pricing__title {
+      font-size: 18px; /* Adjusted font size */
+    }
+  
+    .pricing__list li {
+      font-size: 16px; /* Adjusted font size */
+    }
+  
+    .pricing__list li .price {
+      padding: 4px 8px; /* Adjusted padding */
+    }
+  }

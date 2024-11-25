@@ -1,0 +1,55 @@
+@import url(header.css);
+@import url(footer.css);
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.profile-section {
+    padding-top: 40px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.list-group-item {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary i {
+    margin-right: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

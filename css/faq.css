@@ -1,0 +1,160 @@
+@import url('header.css');
+
+@import url('footer.css');
+
+
+/* Page Title */
+.page-title {
+  background: url('images/slider/8.jpg') no-repeat center center/cover;
+  background-size:cover; /* Set fixed size for the image */
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text readability */
+  z-index: 1;
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+}
+
+  
+  /* FAQ Section */
+  .faq-section {
+    padding-top: 60px; /* Ensuring a gap from the title */
+  }
+  
+  .faq-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-btn:hover {
+    color: #007bff;
+  }
+  
+  .faq-btn i {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-btn[aria-expanded="true"] i {
+    transform: rotate(90deg);
+  }
+  
+  .accordion-body {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: none;
+    color: #333;
+  }
+  
+  .accordion-item {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Sidebar Widgets */
+  .widget {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .widget-help {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  
+  .widget-schedule {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  
+  .widget__icon {
+    color: #007bff;
+  }
+  
+  .widget__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .widget__desc {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .phone__number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .widget-schedule ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .widget-schedule li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .widget-schedule li span {
+    color: #555;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
